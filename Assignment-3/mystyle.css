@@ -1,0 +1,134 @@
+body{
+	
+	text-align: center;
+	font-family: Arial;
+	
+}
+
+h3{
+	color: white;
+	letter-spacing: 0.8px;
+	padding-right: 12px;
+}
+
+h5{
+	
+	color: white;
+	letter-spacing: 0.8px;
+}
+
+label{
+	color: white;
+}
+
+
+#form
+{
+   width: 48%;
+   background-color: black;
+   padding-bottom: 3px;
+   padding-top: 3px;
+   margin-left: 25%;
+   letter-spacing: 0.5px;
+   background-image: url("123.jpeg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   
+ 
+}
+
+.firstname{
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-right: 40px;
+	padding-left: 40px;
+	text-align: left;
+	padding-left:5px; 
+	width: 210px;
+	margin-left: 98px;
+}
+
+.email-number{
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-left: 5px;
+	text-align: left;
+	text-align: middle;
+	width: 425px;
+	margin-left: 25px;
+}
+
+.citizen
+{
+	padding-top: 5px;
+	padding-bottom: 4px;
+	padding-left: 4px;
+	text-align: left;
+	width: 425px;
+	margin-left: 85px;
+	border-radius: 9px;
+
+}
+
+.gender{
+	padding-top: 4px;
+	padding-bottom: 4px;
+	text-align: left;
+	width: 425px;
+	margin-left: 80px;
+	border-radius: 9px;
+}
+
+.last{
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	width: 210px;
+}
+
+.landmark-state{
+    padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	padding-left:5px; 
+	width: 212px;
+	margin-left: 140px;
+}
+
+.address{
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	padding-left:5px; 
+	width: 212px;
+	margin-left: 70px;
+}
+
+.month-year{
+    padding-top: 4px;
+	padding-bottom: 4px;
+	text-align: left;
+	width: 139px;
+	border-radius: 9px;
+}
+
+.day{
+	padding-top: 4px;
+	padding-bottom: 4px;
+	text-align: left;
+	padding-left:5px; 
+	width: 139px;
+	margin-left: 35px;
+	border-radius: 9px;
+}
+
+#button
+{
+	background-color: blue;
+	color: white;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+	width: 425;
+	margin-left: 139px;
+}
