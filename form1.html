@@ -1,0 +1,93 @@
+<html>
+<head>
+	<title>Form</title>
+</head>
+<style type="text/css">
+
+	table,tr,th,td{
+		border : 1px solid black ;
+		border-collapse: collapse;
+			font-family: "arial";
+     }
+
+	td,tr{
+		padding-top: 20px;
+		padding-bottom: 10px;
+        text-align: left;
+        padding-right: 20px;
+        padding-left: 5px;
+
+       }
+
+      th{
+       	padding-top: 10px;
+		padding-bottom: 3px;
+       	text-align: center;
+       	background-color: lightgrey;
+       	 padding-right: 20px;
+        }
+
+  #form{
+  	   font-family: "arial";
+  	   padding-top: 15px;
+  	   padding-left: 20px;
+       padding-bottom: 20px;
+    }
+
+   h2{
+  	  padding-left: 500px;
+  	  margin-top: 50px;
+  	  letter-spacing: 0.5px;
+  	 }
+
+</style>
+
+<body >
+	
+	<form method="POST" action="form1.html">
+		<h2>Enter Your Details</h2>
+		<div id="form">
+		<table>
+			 <tr>
+    	        <th>Name</th>
+    	        <th>Email</th>
+    	        <th>Contact</th>
+                <th>City</th>
+                <th>Courses</th>
+                <th>Interests</th>
+            </tr>
+
+			<tr>
+		<td><input type="text" name="Name" placeholder="Enter your name" required> </td>
+		<td><input type="text" name="Email" placeholder="Enter your Email" required></td>
+		<td><input type="text" name="Contact" placeholder="Contact no." maxlength="10" pattern="\d{10}" required></td>
+		<td><select name="city">
+			<option value="Dehradun">Dehradun</option>
+			<option value="Delhi">Delhi</option>
+			<option value="Mumbai">Mumbai</option>
+			<option value="Hyderabad">Hyderabad</option>
+		</select></td>
+
+		<td><select name="Course">
+			<option value="B.Tech">B.Tech</option>
+			<option value="BBA">BBA</option>
+			<option value="BCA">BCA</option>
+			<option value="BA">BA</option>
+		</select></td>
+
+		<td>Photography<input type="checkbox" value="Coding" name="interest[]">
+            Singing <input type="checkbox" value="Sports" name="interest[]" >
+            Reading <input type="checkbox" value="Reading" name="interest[]">
+            Travelling <input type="checkbox" value="Travelling" name="interest[]">
+            Cooking<input type="checkbox" value="Travelling" name="interest[]">
+        </td>
+    </tr>
+
+   
+</table>
+</div>
+<br>
+<input style="color: white; margin-left: 50px; background-color: blue " type="Submit" name="Submit">
+</form>
+</body>
+</html>
