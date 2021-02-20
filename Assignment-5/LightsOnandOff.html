@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Random Image Generation</title>
+</head>
+<body>
+
+	<img id="img" src="LightOFF.jpg" height="300px" width="200px">
+	<input id="toggle" onclick="fun()" type="button" value="ON">
+
+
+</body>
+<script type="text/javascript">
+	function fun()
+	{
+		var onoff = document.getElementById("toggle").value;
+		if(onoff=="ON")
+		{
+			document.getElementById("img").src="LightON.jpg";
+			document.getElementById("toggle").value = 'OFF';
+
+		}
+		else
+		{
+			document.getElementById("img").src="LightOFF.jpg";
+			 document.getElementById("toggle").value = 'ON';
+		}
+	}
+</script>
+</html>
