@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tic Tac Toe Game</title>
+	<style type="text/css">
+		td{
+			width: 100px;
+			height: 100px;
+			background: lightblue;
+			font-size: 40px;
+			text-align: center;
+			border-radius: 10px;
+		}
+		table{
+			margin: 20px auto;
+			border-radius: 10px;
+		}
+
+		body{
+			background-color: white;
+		}
+
+		h1,h2{
+			text-align: center;
+		}
+
+	
+
+	</style>
+</head>
+<body>
+	<h1>TIC TAC TOE</h1>
+    <h2 id="player">Let's Play</h2>
+	<table>
+	<tr>
+		<td id = "r1" onclick="printx('1')"></td>
+		<td id = "r2" onclick="printx('2')"></td>
+		<td id = "r3" onclick="printx('3')"></td>
+	</tr>
+
+	<tr>
+		<td id = "r4" onclick="printx('4')"></td>
+		<td id = "r5" onclick="printx('5')"></td>
+		<td id = "r6" onclick="printx('6')"></td>
+	</tr>
+    
+    <tr>
+		<td id = "r7" onclick="printx('7')"></td>
+		<td id = "r8" onclick="printx('8')"></td>
+		<td id = "r9" onclick="printx('9')"></td>
+	</tr>
+
+
+
+	</table>
+	<script type="text/javascript">
+		let sign ="x";
+		let disp = document.getElementById("player");
+
+
+		function printx(number)
+		{
+			let isko = document.getElementById("r"+number);
+			console.log(isko);
+
+			if(isko.innerText==""){
+			isko.innerText = sign;
+			winner();
+
+			checksign();
+			disp.innerHTML= "<center>"+ sign +"'s Turn";
+			
+		}
+
+		}
+
+		function checksign()
+		{
+			if(sign=="x")
+			sign ="0";
+             
+			else
+				sign ="x";
+		}
+
+	function getbox(no){
+		return document.getElementById("r"+no).innerHTML;
+	}
+
+	function checkmove(a,b,c,m){
+		if(getbox(a)==m && getbox(b)==m && getbox(c)==m)
+			return true;
+		else
+			return false;
+	}
+
+	function winner(){
+		if(checkmove(1,2,3,sign) || checkmove(4,5,6,sign) || checkmove(7,8,9,sign) || checkmove(1,4,7,sign) || checkmove(2,5,8,sign) || checkmove(3,6,9,sign) || checkmove(1,5,9,sign) || checkmove(7,5,3,sign))
+		{
+           disp.innerHTML = "<center>" +sign + " is the WINNER " + "</center";
+           for(let i=1;i<=9;i++){
+           	  document.getElementById("r"+i).innerHTML="";
+           }
+       throw "game end";
+   }
+
+   else
+    {
+       if(getbox(1)!="" && getbox(2)!="" && getbox(3)!="" && getbox(4)!="" && getbox(5)!="" && getbox(6)!="" && getbox(7)!="" && getbox(8)!="" && getbox(9)!=""){
+       	  disp.innerHTML = "<center> Its a Tie </center";
+       	  throw "Its a Tie";
+       }
+
+   }
+	}
+	</script>
+
+</body>
+</html>
